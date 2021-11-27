@@ -1,0 +1,8 @@
+DEFAULT_AXIS_STEPS_PER_UNIT 400  -> 800
+
+GRID_MAX_POINTS_X 9
+
+
+  #define MESH_INSET 1  from 10 -- only applies to UBL, not used.
+
+  Enable skew correction, HOST_ACTIONS_COMMAND, Restore level after g28, BILINEAR_LEVELING PIDTEMPBED
