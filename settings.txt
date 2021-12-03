@@ -1,0 +1,89 @@
+HOTEND PID
+M303 E0 C8 S210
+Recv: PID Autotune finished! Put the last Kp, Ki and Kd constants from below into Configuration.h
+Recv: #define DEFAULT_Kp 46.19
+Recv: #define DEFAULT_Ki 5.88
+Recv: #define DEFAULT_Kd 90.73
+
+to save M301 P46.19 I5.88 D90.73
+
+bed hotend
+M303 E-1 C8 S60
+Recv: #define DEFAULT_bedKp 120.17
+Recv: #define DEFAULT_bedKi 23.79
+Recv: #define DEFAULT_bedKd 404.70
+
+M304 P120.17 I23.79 D404.70
+
+M500 Save to eprom
+
+
+Send: M503
+Recv: echo:; Linear Units:
+Recv:   G21 ; (mm)
+Recv: echo:; Temperature Units:
+Recv: echo:  M149 C ; Units in Celsius
+Recv: echo:; Filament settings (Disabled):
+Recv: echo:  M200 S0 D1.75
+Recv: echo:; Steps per unit:
+Recv: echo:  M92 X80.00 Y80.00 Z800.00 E130.00
+Recv: echo:; Max feedrates (units/s):
+Recv: echo:  M203 X500.00 Y500.00 Z5.00 E25.00
+Recv: echo:; Max Acceleration (units/s2):
+Recv: echo:  M201 X1000.00 Y1000.00 Z100.00 E5000.00
+Recv: echo:; Acceleration (units/s2) (P<print-accel> R<retract-accel> T<travel-accel>):
+Recv: echo:  M204 P500.00 R500.00 T500.00
+Recv: echo:; Advanced (B<min_segment_time_us> S<min_feedrate> T<min_travel_feedrate> J<junc_dev>):
+Recv: echo:  M205 B20000.00 S0.00 T0.00 J0.08
+Recv: echo:; Home offset:
+Recv: echo:  M206 X0.00 Y0.00 Z0.00
+Recv: echo:; Auto Bed Leveling:
+Recv: echo:  M420 S0 Z10.00 ; Leveling OFF
+Recv: echo:  G29 W I0 J0 Z0.06750
+Recv: echo:  G29 W I1 J0 Z0.04750
+Recv: echo:  G29 W I2 J0 Z0.07250
+Recv: echo:  G29 W I3 J0 Z0.08375
+Recv: echo:  G29 W I4 J0 Z0.17750
+Recv: echo:  G29 W I0 J1 Z0.04625
+Recv: echo:  G29 W I1 J1 Z0.03250
+Recv: echo:  G29 W I2 J1 Z0.02750
+Recv: echo:  G29 W I3 J1 Z0.06500
+Recv: echo:  G29 W I4 J1 Z0.16000
+Recv: echo:  G29 W I0 J2 Z0.04250
+Recv: echo:  G29 W I1 J2 Z0.02500
+Recv: echo:  G29 W I2 J2 Z0.04375
+Recv: echo:  G29 W I3 J2 Z0.08000
+Recv: echo:  G29 W I4 J2 Z0.16250
+Recv: echo:  G29 W I0 J3 Z0.07375
+Recv: echo:  G29 W I1 J3 Z0.05125
+Recv: echo:  G29 W I2 J3 Z0.05625
+Recv: echo:  G29 W I3 J3 Z0.10375
+Recv: echo:  G29 W I4 J3 Z0.20750
+Recv: echo:  G29 W I0 J4 Z0.14375
+Recv: echo:  G29 W I1 J4 Z0.11500
+Recv: echo:  G29 W I2 J4 Z0.11125
+Recv: echo:  G29 W I3 J4 Z0.17250
+Recv: echo:  G29 W I4 J4 Z0.26875
+Recv: echo:; Material heatup parameters:
+Recv: echo:  M145 S0 H185.00 B45.00 F255
+Recv: echo:  M145 S1 H240.00 B110.00 F255
+Recv: echo:; Hotend PID:
+Recv: echo:  M301 P46.19 I5.88 D90.73
+Recv: echo:; Bed PID:
+Recv: echo:echo:  M304 P120.17 I23.79 D404.70
+Recv: echo:; Controller Fan:
+Recv: echo:  M710 S255 I0 A1 D60 ; (100% 0%)
+Recv: echo:; Z-Probe Offset:
+Recv: echo:  M851 X43.00 Y5.00 Z-1.85 ; (mm)
+Recv: echo:; Stepper driver current:
+Recv: echo:  M906 X580 Y580 Z580
+Recv: echo:  M906 T0 E650
+Recv: 
+Recv: echo:; Driver stepping mode:
+Recv: echo:  M569 S1 X Y Z
+Recv: echo:  M569 S1 T0 E
+Recv: echo:; Linear Advance:
+Recv: echo:  M900 K0.22
+Recv: echo:; Filament load/unload:
+Recv: echo:  M603 L0.00 U100.00 ; (mm)
+Recv: ok

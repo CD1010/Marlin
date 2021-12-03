@@ -1,8 +1,18 @@
 DEFAULT_AXIS_STEPS_PER_UNIT 400  -> 800
 
-GRID_MAX_POINTS_X 9
+GRID_MAX_POINTS_X 5
 
 
   #define MESH_INSET 1  from 10 -- only applies to UBL, not used.
 
-  Enable skew correction, HOST_ACTIONS_COMMAND, Restore level after g28, BILINEAR_LEVELING PIDTEMPBED
+  Enable skew correction, HOST_ACTIONS_COMMAND, Restore level after g28, BILINEAR_LEVELING ,PIDTEMPBED,
+  BLTouch, 5 x 5 Grid Level,
+  Set Z steps/mm to 800 - Was wrong for new lead screw
+  Z offset = -1.85
+
+
+  
+#ifndef PS_ON_PIN
+  #define PS_ON_PIN                        PC13  // Power Supply Control
+#endif
+  
