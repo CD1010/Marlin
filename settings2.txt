@@ -93,14 +93,40 @@ Recv: echo:; Home offset:
 Recv: echo:  M206 X0.00 Y0.00 Z0.00
 Recv: echo:; Auto Bed Leveling:
 Recv: echo:  M420 S0 Z10.00 ; Leveling OFF
-
+Recv: echo:  G29 W I0 J0 Z-0.00125
+Recv: echo:  G29 W I1 J0 Z-0.02250
+Recv: echo:  G29 W I2 J0 Z-0.02625
+Recv: echo:  G29 W I3 J0 Z-0.06125
+Recv: echo:  G29 W I4 J0 Z-0.05375
+Recv: echo:  G29 W I0 J1 Z0.05750
+Recv: echo:  G29 W I1 J1 Z0.03625
+Recv: echo:  G29 W I2 J1 Z-0.00250
+Recv: echo:  G29 W I3 J1 Z-0.01375
+Recv: echo:  G29 W I4 J1 Z-0.01000
+Recv: echo:  G29 W I0 J2 Z0.10500
+Recv: echo:  G29 W I1 J2 Z0.06750
+Recv: echo:  G29 W I2 J2 Z0.02000
+Recv: echo:  G29 W I3 J2 Z0.02375
+Recv: echo:  G29 W I4 J2 Z0.01250
+Recv: echo:  G29 W I0 J3 Z0.14625
+Recv: echo:  G29 W I1 J3 Z0.11625
+Recv: echo:  G29 W I2 J3 Z0.06125
+Recv: echo:  G29 W I3 J3 Z0.04500
+Recv: echo:  G29 W I4 J3 Z0.04375
+Recv: echo:  G29 W I0 J4 Z0.20625
+Recv: echo:  G29 W I1 J4 Z0.15375
+Recv: echo:  G29 W I2 J4 Z0.09375
+Recv: echo:  G29 W I3 J4 Z0.07250
+Recv: echo:  G29 W I4 J4 Z0.07750
 Recv: echo:; Material heatup parameters:
 Recv: echo:  M145 S0 H200.00 B60.00 F255
 Recv: echo:  M145 S1 H240.00 B110.00 F255
+
 Recv: echo:; Hotend PID:
 Recv: echo:  M301 P36.76 I4.15 D81.42
 Recv: echo:; Bed PID:
 Recv: echo:echo:  M304 P62.55 I10.64 D240.74
+
 Recv: echo:; Controller Fan:
 Recv: echo:  M710 S255 I128 A1 D60 ; (100% 50%)
 Recv: echo:; Z-Probe Offset:
